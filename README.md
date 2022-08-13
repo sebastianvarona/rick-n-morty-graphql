@@ -1,6 +1,6 @@
 # Rick & Morty Characters Search Test
 
-![image](https://user-images.githubusercontent.com/77818407/183471931-71fb4b0f-a0ae-432c-96fa-fecac3d27120.png)
+![Captura web_13-8-2022_123940_127 0 0 1](https://user-images.githubusercontent.com/77818407/184505965-4b7b92aa-4459-421f-a71c-c3ece9c2ab7e.jpeg)
 
 ## Como iniciar la aplicacion:
 
