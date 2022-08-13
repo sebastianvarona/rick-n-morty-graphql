@@ -12,3 +12,17 @@ body {
     @apply bg-neutral-900 text-neutral-100;
   }
 }
+
+.scrollable::-webkit-scrollbar {
+  width: 7px; /* width of the entire scrollbar */
+}
+
+.scrollable::-webkit-scrollbar-track {
+  background: transparent; /* color of the tracking area */
+}
+
+.scrollable::-webkit-scrollbar-thumb {
+  background-color: #5b5e6f; /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: 3px solid transparent; /* creates padding around scroll thumb */
+}

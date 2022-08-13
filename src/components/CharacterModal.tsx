@@ -5,12 +5,16 @@ import { Dialog, Transition } from '@headlessui/react';
 import { RootState } from '../app/store';
 import { useSelector, useDispatch } from 'react-redux';
 import { openModal } from '../app/modal-slice';
+import { addCharacterToHistory, setFavouriteCharacter } from '../app/app-slice';
 
 import { Character, CharacterVars } from '../app/types';
 
 // GraphQL
 import { useQuery } from '@apollo/client';
 import { GET_CHARACTER } from '../hooks/queries';
+
+// Modal component that receives a characterId via Redux, fetches the most relevant character data and displays it.
+// It also adds a click handler that adds the character to the history and adds it to the favourites.
 
 function CharacterModal(): JSX.Element {
   const [character, setCharacter] = useState<Character | null>(null);
@@ -140,7 +144,13 @@ function CharacterModal(): JSX.Element {
                   <button
                     type="button"
                     className="inline-flex justify-center rounded-md outline outline-transparent transition-colors bg-red-200 px-4 py-2 text-sm text-red-600 hover:bg-red-500 hover:text-white ring-2 ring-red-500 ring-offset-2 font-bold"
-                    onClick={closeModal}
+                    onClick={() => {
+                      closeModal();
+                      if (character) {
+                        dispatch(setFavouriteCharacter(character));
+                        dispatch(addCharacterToHistory(character.name));
+                      }
+                    }}
                   >
                     New favorite{' '}
                     <svg

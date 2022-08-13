@@ -2,6 +2,8 @@ import { Character } from '../app/types';
 import { useDispatch } from 'react-redux';
 import { openModal, setCharacterId } from '../app/modal-slice';
 
+// Simple component that receives basic Character info such as Image and Name and displays it.
+// It also adds a click handler that opens the modal and sets the characterId in the modal slice via Redux.
 function Card(props: { character: Character }): JSX.Element {
   const dispatch = useDispatch();
 

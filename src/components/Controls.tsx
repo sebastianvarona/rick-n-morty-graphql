@@ -7,6 +7,8 @@ import type { RootState } from '../app/store';
 import { useSelector, useDispatch } from 'react-redux';
 import { decrementPage, incrementPage } from '../app/app-slice';
 
+// Previous and Next page buttons that are used to navigate between pages of characters.
+// Each one receives a click handler that dispatches an action to change the page number.
 function Controls(): JSX.Element {
   const data: Characters | null = useSelector(
     (state: RootState) => state.app.data

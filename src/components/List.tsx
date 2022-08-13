@@ -15,6 +15,8 @@ import { Characters, CharactersVars } from '../app/types';
 import { useQuery } from '@apollo/client';
 import { GET_ALL_CHARACTERS } from '../hooks/queries';
 
+// Component that handles a visual loading of all characters and also once the data is loaded,
+// it displays a Card Component for each character  and adds the data to the Redux store.
 function List(): JSX.Element {
   const pageId = useSelector((state: RootState) => state.app.page);
   const dispatch = useDispatch();
