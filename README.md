@@ -8,4 +8,4 @@
 - Ejecutar el comando `npm run dev` para iniciar un servidor local de desarrollo
 - Ingresar a la url [localhost:5173/](http://127.0.0.1:5173/) para visualizar el sitio
 
-**Puedes visualizar la aplicación por este enlace tambien!** [Rick & Morty Sebastian Varona](https://frontend-iqthink.vercel.app/)
+**Puedes visualizar la aplicación por este enlace tambien!** [Rick & Morty Sebastian Varona](https://rick-n-morty-graphql.vercel.app/)
